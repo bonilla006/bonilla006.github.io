@@ -1,0 +1,11 @@
+html, body {
+    height: 100vh;
+    background-color: #5B3A29;
+    
+}
+
+.C_carta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

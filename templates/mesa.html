@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mesa.css') }}">
+    <title>...</title>
+</head>
+<body>
+    <a href="{{ url_for('carta') }}" class="C_carta">
+        <svg width="600" height="420" xmlns="http://www.w3.org/2000/svg">
+        <rect x="60" y="60" width="480" height="300" fill="white" stroke="black" stroke-width="12" />
+        <polygon points="60,60 300,240 540,60" fill="black" />
+        </svg>
+    </a>
+</body>
+</html>

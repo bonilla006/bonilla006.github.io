@@ -1,0 +1,125 @@
+html, body {
+    height: 100vh;
+    background-color: rgb(94, 215, 252);
+}
+.container_afuera {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical de las nubes */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Ajusta el ancho total de las nubes */
+}
+
+.nube {
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.nube::before, .nube::after {
+    content: '';
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.nube {
+    width: 60px; /* Ancho de la nube */
+    height: 40px; /* Alto de la nube */
+}
+
+.nube::before {
+    width: 50px; /* Ancho de la parte izquierda de la nube */
+    height: 50px; /* Alto de la parte izquierda de la nube */
+    left: -25px; /* Ajusta la posición */
+    top: 10px; /* Ajusta la posición */
+}
+
+.nube::after {
+    width: 50px; /* Ancho de la parte derecha de la nube */
+    height: 50px; /* Alto de la parte derecha de la nube */
+    right: -25px; /* Ajusta la posición */
+    top: 10px; /* Ajusta la posición */
+}
+.container_casa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.casa {
+    background-color: rgb(255, 255, 153);
+    height: 50%;
+    width: 50%;
+}
+
+.container_elementos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.container_ventana {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana {
+    background-color: rgba(243, 235, 235, 0.842);
+    width: 50%;
+    height: 50%;
+    position: relative; 
+    border: 5px solid rgb(198, 140, 83);
+}
+
+.cruz {
+    position: absolute;
+    background-color: black;
+}
+
+.vertical {
+    width: 10px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.horizontal {
+    height: 10px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container_puerta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.puerta {
+    background-color: rgb(198, 140, 83);
+    height: 25%;
+    width: 25%;
+    padding: 10% 1%;
+}
+
+.perilla {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-top: 20%;
+}

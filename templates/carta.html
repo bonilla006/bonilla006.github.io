@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/carta.css') }}">
+    <title>Gracias por amarme!</title>
+</head>
+<body>
+    <div class="carta">
+        <h1 style="color: rgb(255, 204, 230)" >Hola Amor Mio!</h1>
+        <h2 style="color: rgb(255, 204, 230)">Gracias por estar conmigo, me hace muy feliz pasar el tiempo contigo.</h2>
+        <h2 style="color: rgb(255, 204, 230)">Agradezco cada momento que tenido contigo y quisiera seguir </h2>
+        <h2 style="color: rgb(255, 204, 230)">teniedo muchos mas. Por eso te pregunto,</h2>
+        <h2 style="color: rgb(255, 204, 230)">¿Quieres ser mi San Valentine y acompañarme a seguir construyendo una historia?</h2>
+        <div class="C_boton">
+            <form action="{{ url_for('espacio') }}" method="get">
+                <button type="submit">Sí</button>
+            </form>
+            <button id="noButton">No</button>
+        </div>
+        
+    </div>
+<script>
+        const numStars = 100;
+        const body = document.body;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 2; // Tamaño entre 2 y 5px
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            body.appendChild(star);
+        }
+
+         // Handle 'No' button hover
+        const noButton = document.getElementById('noButton');
+        
+        noButton.addEventListener('mouseover', function() {
+            // Cancel cursor
+            this.style.cursor = 'not-allowed';
+            // Redirect to another page
+            window.location.href = "{{ url_for('espacio_triste')}}"; // Replace with your desired URL
+        });
+</script>
+</body>
+</html>

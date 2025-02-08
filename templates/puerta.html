@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/exterior.css') }}">
+    <title>Hola; Amor Mio</title>
+</head>
+<body>
+    <div class=container_afuera>
+        <div class="nube"></div>
+        <div class="nube"></div>
+        <div class="nube"></div>
+    </div>
+    <div class="container_casa">
+        <div class="casa">
+            <div class="container_elementos">
+                <div class="container_ventana">
+                    <div class="ventana">
+                        <div class="cruz vertical"></div>
+                        <div class="cruz horizontal"></div>
+                    </div>
+                </div>
+                <div class="container_puerta">
+                    <a href="{{ url_for('encasa') }}" class="puerta">
+                        <div class="perilla"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

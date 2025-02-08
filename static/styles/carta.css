@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #001133, #003366);
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+.carta{
+    background-color: rgba(239, 245, 250, 0.555);
+    height: 50%;
+    width: 50%;
+}
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.C_boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 161, 210);
+    transition: 0.3s;
+}
+button:hover {
+    background-color: rgb(255, 204, 230);
+}
+#noButton {
+    position: relative;
+}

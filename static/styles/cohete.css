@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #001;
+}
+.cohete {
+    position: relative;
+    width: 50px;
+    height: 150px;
+    background-color: #f00;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.punta {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #f00;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+.ventana {
+    width: 30px;
+    height: 30px;
+    background-color: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.burbuja {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    visibility: hidden; /* Oculta inicialmente */
+    transition: all 0.5s ease;
+}
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle 1.5s infinite alternate;
+}
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fuego {
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0;
+    border-radius: 50%;
+    animation: fuegoAnim 0.5s infinite alternate;
+}
+@keyframes fuegoAnim {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}

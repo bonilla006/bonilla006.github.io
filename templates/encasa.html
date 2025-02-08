@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/interior.css') }}">
+    <title>Bienvenida!</title>
+</head>
+<body>
+    <div class="C_elementos">
+        <a href="{{ url_for('mesa') }}" class="C_mesa">
+            <div class="arriba">
+                <div class="mesa"></div>
+            </div>
+            <div class="abajo">
+                <div class="piernas pierna-izquierda"></div>
+                <div class="piernas pierna-derecha"></div>
+            </div>
+        </a>
+
+        <div class="C_ventana">
+            <div class="ventana">
+                <div class="sol"> 
+                    <svg width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="55" cy="55" r="44" fill="yellow" stroke="black" stroke-width="2" />
+                        
+                        <!-- Corazón izquierdo más pequeño -->
+                        <path d="M31.5 40
+                                C21 20, 0 20, 0 40
+                                C0 60, 31.5 80, 31.5 70
+                                C31.5 80, 62 60, 62 40
+                                C62 20, 43 20, 31.5 40Z" 
+                            fill="red" />
+                        
+                        <!-- Corazón derecho más pequeño con espacio del 3% -->
+                        <path d="M72 40
+                                C82 20, 102 20, 102 40
+                                C102 60, 72 80, 72 70
+                                C72 80, 43 60, 43 40
+                                C43 20, 63 20, 72 40Z" 
+                            fill="red" />
+                        
+                        <!-- Línea de sonrisa -->
+                        <path d="M32 70
+                                Q55 85, 72 70" 
+                            stroke="black" stroke-width="2" fill="none" />
+                    </svg>
+                    <div class="bubble" id="bubble">Hola; me llamo Sr. Sol. Yadriel me pidio que ayudara a mantener calor y luz en su relacion.
+                    Ademas me dijo que en la mesa hay una sorpresa!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    window.onload = function() {
+        const bubble = document.getElementById('bubble');
+        bubble.style.display = 'block';
+        bubble.style.top = '20px'; // Ajusta la posición vertical
+        bubble.style.left = '7px'; // Ajusta la posición horizontal
+    };
+</script>
+</body>
+</html>
