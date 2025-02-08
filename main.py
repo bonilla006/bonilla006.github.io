@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/frente_casa/')
 def casa():
-    return render_template('puerta.html')
+    return render_template('index.html')
 
 @app.route('/dentro_casa/')
 def encasa():
